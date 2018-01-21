@@ -3,7 +3,7 @@ using tikz in LaTeX.
 
 _INSTALLATION_
 
-- Copy generate_mem_diagram.py into /usr/local/bin
+- Copy generate_mem_diagram.py into /usr/local/bin (or elsewhere in PATH)
 - Copy mem_diagram.sty into the the same directory as the LaTeX file
 from which you want to include a memory diagram.
 - Include the mem_diagram package in your LaTeX source -- \includepackage{mem_diagram}
