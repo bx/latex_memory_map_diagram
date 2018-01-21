@@ -1,0 +1,20 @@
+node, empty, 0,             0x555555554000,begin,
+node, regular,  0x555555554000, 0x555555555000,sx,code
+node, regular,  0x555555754000, 0x555555756000,sd,data
+node, grow up heap,  0x555555c04000, 0x555555c18000,heap,heap
+node, regular,  0x7ffff7a21000, 0x7ffff7bcf000,,libc code
+node, regular,  0x7ffff7dce000, 0x7ffff7dd2000,,libc read-only data
+node, regular,  0x7ffff7dd2000, 0x7ffff7dd4000,,libc data
+node, regular,  0x7ffff7dd8000, 0x7ffff7dfd000,,ld code
+node, regular,  0x7ffff7ffc000, 0x7ffff7ffd000,,ld read-only data
+node, regular,  0x7ffff7ffd000, 0x7ffff7ffe000,,ld data
+node, grow down stack,    0x7ffffffde000, 0x7ffffffff000,stack,stack
+node, empty,0x7ffffffff000, 0xffffffffffff,end,
+
+multiregionlabel,sx,sd, data and code
+regionlabel,heap,This is the \textit{heap}
+
+config,height,10
+config,width,11
+
+
