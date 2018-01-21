@@ -1,0 +1,72 @@
+These files help automate the process of drawing memory map diagrams
+using tikz in LaTeX.
+
+_INSTALLATION_
+
+- Copy generate_mem_diagram.py into /usr/local/bin
+- Copy mem_diagram.sty into the the same directory as the LaTeX file
+from which you want to include a memory diagram.
+- Include the mem_diagram package in your LaTeX source -- \includepackage{mem_diagram}
+
+
+_BUILD_
+- latex/pdflatex must be run with the --shell-escape option
+- In your LaTeX source, use the \memdiagram command at the location in which you want to draw the diagram
+
+\memdiagram[scaling factor]{path/to/csv}
+
+
+_MEMORY MAP CSV STRUCTURE_
+
+Each line in the csv file that defines the memory map must start with
+one of the following keywords:
+
+node, regionlabel, multiregionlabel, config
+
+Lines that start with the 'node' keyword define a region of
+memory. They must have 6 comma separated values as follows:
+
+node, {KIND}, {min address}, {max address}, {ID}, {CONTENTS}
+
+-{KIND} can be one of: empty, regular, grow up heap, grow down stack
+You can define more node KINDs via \tikzstyle.  For example, you can
+define a node for registers and how it looks in your LaTeX file like:
+\tikzstyle{registers} = [dotted, very thick, pattern=crosshatch dots gray,
+    fill opacity=1, text opacity=1]
+- {min address} and {max address} are the minimum and maximum address
+values for the region
+- {ID} is a unique identifier used to refer to the region if labeled.
+It can be left empty.
+- {CONTENTS} is text to be written inside that particular node's box. It
+can be left empty.
+
+Lines that start with 'regionlabel' indicate that a particular region
+should be annotated with a label. Its syntax is
+
+regionlabel, {ID}, {CONTENTS}
+
+-{ID} is the ID of the node to be labeled
+-{CONTENTS} is the label itself
+
+Lines that start with 'multiregionlabel' indicate that a consecutive
+group of regions should be annotated with a label. Its syntax is
+
+multiregionlabel, {ID TOP}, {ID BOTTOM}, {CONTENTS}
+
+-{ID TOP} is the ID of the top-most node to be labeled
+-{ID BOTTOM} is the ID of the top-most node to be labeled
+-{CONTENTS} is the label itself
+
+I will not be defining the 'config' keyword at this time
+
+
+_EVERYTHING ELSE_
+
+See the example/ subdirectory for example usage.
+
+generate_mem_diagram.py is not meant for standalone use, it is invoked
+via \memdiagram in LaTeX
+
+I will not be documenting update_csv_group.py at this time, but I did
+find it useful when tweaking values and 'config' keyworks in groups of
+csv files
