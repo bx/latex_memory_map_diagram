@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.8.6)  21 JAN 2018 18:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.8.6)  21 JAN 2018 19:02
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -513,7 +513,7 @@ LaTeX Font Warning: Size substitutions with differences
 Here is how much of TeX's memory you used:
  13984 strings out of 492990
  310333 string characters out of 6138689
- 374429 words of memory out of 7900000
+ 374421 words of memory out of 7900000
  17278 multiletter control sequences out of 15000+600000
  4154 words of font info for 16 fonts, out of 5000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -521,7 +521,7 @@ Here is how much of TeX's memory you used:
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on example.pdf (1 page, 29357 bytes).
+Output written on example.pdf (1 page, 29366 bytes).
 PDF statistics:
  24 PDF objects out of 1000 (max. 8388607)
  16 compressed objects within 1 object stream
