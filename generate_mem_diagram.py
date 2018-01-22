@@ -208,7 +208,7 @@ class MemoryMapNodeTemplate():
         if node.kind.startswith('grow down '):
             typeattrs += 'very thick, '
             node.kind = node.kind[len('grow down'):].strip()
-            if reverse:
+            if not reverse:
                 typeattrs += 'grow up,'
                 extras = "\n\\draw [->, very thick] ([yshift=-9pt] last.north)"\
                          " -- +(0,0.25);"
@@ -218,7 +218,7 @@ class MemoryMapNodeTemplate():
                          "([yshift=9pt] last.south) -- +(0,-0.25);"
         if node.kind.startswith('grow up '):
             node.kind = node.kind[len('grow up'):].strip()
-            if reverse:
+            if not reverse:
                 typeattrs += 'grow down,'
                 extras = "\n\\draw [->, very thick] "\
                          "([yshift=9pt] %s.south) -- +(0,-0.25);" % node.node_id
