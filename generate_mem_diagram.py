@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 from __future__ import division
 # The MIT License (MIT)
 # Copyright (c) 2018 Rebecca ".bx" Shapiro
